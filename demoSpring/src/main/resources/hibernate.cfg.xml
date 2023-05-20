@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE hibernate-configuration PUBLIC "-//Hibernate/Hibernate Configuration DTD 3.0//EN" 
+"http://hibernate.sourceforge.net/hibernate-configuration-3.0.dtd">
+
+<hibernate-configuration>
+	<session-factory>
+		<property name="show_sql">false</property>
+		<property name="format_sql">true</property>
+		<property name="dialect">project1.persistence.SQLiteDialect</property>
+		<property name="connection.driver_class">org.sqlite.JDBC</property>
+		<property name="connection.url">jdbc:sqlite:people.db</property>
+		<property name="connection.username"></property>
+		<property name="connection.password"></property>
+		<mapping class="project1.model.Person"/>
+		<mapping class="project1.model.District"/>
+		
+	</session-factory>
+</hibernate-configuration>
